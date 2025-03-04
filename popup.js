@@ -8,7 +8,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let isTradingActive = false;
 
+// 'localStorage'에서 값 가져오기
+    const tradeType = localStorage.getItem('tradeType');
+    const price = localStorage.getItem('price');
+    const stopLoss = localStorage.getItem('stopLoss');
+    const takeProfit = localStorage.getItem('takeProfit');
 
+    // 각 입력 필드에 값 세팅
+    if (tradeType) {
+        document.getElementById('tradeType').value = tradeType;
+    }
+    if (price) {
+        document.getElementById('price').value = price;
+    }
+    if (stopLoss) {
+        document.getElementById('stopLoss').value = stopLoss;
+    }
+    if (takeProfit) {
+        document.getElementById('takeProfit').value = takeProfit;
+    }
 
 
     // 1. chrome.storage.local에서 상태를 불러옴
@@ -108,15 +126,23 @@ document.addEventListener('DOMContentLoaded', () => {
         
     // 웹훅 테스트를 보내는 함수
     function sendWebhookTest() {
-        const webhookUrl = 'https://4ab9-218-52-82-250.ngrok-free.app/webhook';  // TradingView 웹훅 URL
+        const webhookUrl = 'http://127.0.0.1:5000/webhook';  // TradingView 웹훅 URL
+
 
         const payload = {
-            "type": "Long",
-            "price": 2.0039,
-            "stop": 1.9905218776,
-            "takeProfit": 2.0039
-            // 'type': 'Short', 'price': 2.6615, 'stop': 2.6641951762, 'takeProfit': 2.6615          
+            "type": document.getElementById("tradeType").value,
+            "price": parseFloat(document.getElementById("price").value),
+            "stop": parseFloat(document.getElementById("stopLoss").value),
+            "takeProfit": parseFloat(document.getElementById("takeProfit").value)
         };
+
+        // const payload = {
+        //     "type": "Long",
+        //     "price": 2.2039,
+        //     "stop": 1.9905218776,
+        //     "takeProfit": 2.5039
+        //     // 'type': 'Short', 'price': 2.6615, 'stop': 2.6641951762, 'takeProfit': 2.6615          
+        // };
 
         // 웹훅 신호를 POST로 보내기
         fetch(webhookUrl, {
@@ -136,7 +162,20 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // 버튼 클릭 시 웹훅 테스트 발송
-    document.getElementById('testWebhookButton').addEventListener('click', sendWebhookTest);
+    document.getElementById('testWebhookButton').addEventListener('click', function() {
+        const tradeType = document.getElementById('tradeType').value;
+        const price = document.getElementById('price').value;
+        const stopLoss = document.getElementById('stopLoss').value;
+        const takeProfit = document.getElementById('takeProfit').value;
+
+        // 'localStorage'에 값 저장하기
+        localStorage.setItem('tradeType', tradeType);
+        localStorage.setItem('price', price);
+        localStorage.setItem('stopLoss', stopLoss);
+        localStorage.setItem('takeProfit', takeProfit);
+
+        sendWebhookTest();
+    });
 
 
 

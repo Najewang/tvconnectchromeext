@@ -1,193 +1,129 @@
+function convertToKST(utcTime) {
+  const date = new Date(utcTime);
+  // UTC 시간을 Date 객체로 변환
 
+  // KST (UTC+9) 변환
+  const kstTime = new Date(date.getTime() + 9 * 60 * 60 * 1000);
 
-
-const ALERT_STORAGE_KEY = "alerts"; // 저장할 키 이름
-
-// 📌 저장된 알람 불러오기
-function getSavedAlerts(callback) {
-    chrome.storage.local.get(ALERT_STORAGE_KEY, (data) => {
-        const alerts = data[ALERT_STORAGE_KEY] || [];
-        callback(alerts);
-    });
+  // KST 시간을 YYYY-MM-DD HH:MM:SS 형식으로 반환
+  return kstTime.toISOString().replace("T", " ").slice(0, 19);
 }
 
-// 📌 새 알람 저장하기
-function saveAlert(alert) {
-    getSavedAlerts((alerts) => {
-        alerts.push(alert); // 새 알람 추가
-        chrome.storage.local.set({ [ALERT_STORAGE_KEY]: alerts }, () => {
-            console.log("✅ 알람 저장됨:", alert);
 
-             // 새로운 알람이 저장되었음을 popup.js에 알리기
-            chrome.runtime.sendMessage({ type: "ALERTS_UPDATED" });
-        });
-    });
+function isJSON(str) {
+try {
+  JSON.parse(str);
+  return true;
+} catch (e) {
+  return false;
+}
 }
 
-// 알림 삭제하기 (CLEAR_ALERTS)
-function clearAlerts() {
-    chrome.storage.local.remove([ALERT_STORAGE_KEY], () => {
-        console.log("알림이 모두 삭제되었습니다.");
-
-        // 새로운 알람이 저장되었음을 popup.js에 알리기
-            chrome.runtime.sendMessage({ type: "ALERTS_UPDATED" });
-    });
-}
-
-// 📌 메시지 리스너 설정
-chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
-    if (message.type === "NEW_ALERT") {
-        saveAlert({
-            symbol: message.symbol,
-            description: message.description,
-            time: message.time
-        });
-        sendResponse({ status: "saved" });
-        
-        sendToServerWebhook(message.description);
-
-    } else if (message.type === "GET_ALERTS") {
-        getSavedAlerts((alerts) => {
-            sendResponse({ alerts });
-        });
-
-    } else if (message.type === "CLEAR_ALERTS") {
-        clearAlerts();
-        sendResponse({ status: "cleared" });
-    } else if (message.action === "START_TRACKING") {
-        startTracking();
-    } else if (message.action === "STOP_TRACKING") {
-        stopTracking();
-    } else if (message.type === 'websocket-message') {
-        console.log("WebSocket 메시지 수신:", message.data);
-        // 여기서 데이터를 필터링하거나 처리할 수 있습니다.
-      }
-    return true; // 🔥 비동기 응답을 위해 `true` 반환
-});
-
-chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
-    
-  });
-
-
-
-// 웹훅 테스트를 보내는 함수
 function sendToServerWebhook(jsonMessage) {
-    const webhookUrl = 'http://127.0.0.1:5000/webhook';  // TradingView 웹훅 URL
+  const webhookUrl = 'http://127.0.0.1:5000/webhook';  // TradingView 웹훅 URL
 
-    const payload = JSON.parse(jsonMessage);
+  const payload = JSON.parse(jsonMessage);
+  console.log('🚀 웹훅 신호 전송:', payload);
+  // 웹훅 신호를 POST로 보내기
+  fetch(webhookUrl, {
+      method: 'POST',
+      headers: {
+          'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(payload),
+  })
+  .then(response => response.json())
+  .then(data => {
+      //UI에 뜨면 좋겠군. 개발필요.
+      console.log('웹훅 신호 전송 성공:', data);
+  })
+  .catch(error => {
+      console.error('웹훅 신호 전송 실패:', error);
+  });
+}
 
-    // 웹훅 신호를 POST로 보내기
-    fetch(webhookUrl, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
+  /*
+  실제 json 데이터 예시
+  {
+    "id": 189,
+    "channel": "private_G-dVFA61MF8zneyz6P4yt2-Ole1276V1qXpaSFviirQ",
+    "text": {
+        "content": {
+            "m": "alert_fired",
+            "p": {
+                "fire_id": 31659826109,
+                "sound_file": null,
+                "symbol": "={\"adjustment\":\"splits\",\"currency-id\":\"XTVCUSDT\",\"session\":\"extended\",\"symbol\":\"BINANCE:XRPUSDT\"}",
+                "cross_interval": false,
+                "popup": true,
+                "message": "{\"type\":\"LongTakeProfit1\",\"price\":2.0554,\"stop\":2.0500046495,\"takeProfit\":2.0553387347}",
+                "alert_id": 1981512860,
+                "sound_duration": 0,
+                "fire_time": "2025-02-28T09:54:01Z",
+                "kinds": [
+                    "regular"
+                ],
+                "name": "MinAlert Strategy (26, 52, 18, 12, 26, 9, 20, 2, 14, 1): alert() 펑크션 콜 온리",
+                "resolution": "1",
+                "bar_time": "2025-02-28T09:53:00Z"
+            },
+            "id": "6wjy-3911738"
         },
-        body: JSON.stringify(payload),
-    })
-    .then(response => response.json())
-    .then(data => {
-        //UI에 뜨면 좋겠군. 개발필요.
-        console.log('웹훅 신호 전송 성공:', data);
-    })
-    .catch(error => {
-        console.error('웹훅 신호 전송 실패:', error);
-    });
-}
-
-
-
-
-
-
-let intervalId = null;
-let lastAlerts = new Set(); // 이전 알람을 저장할 Set
-
-
-// 🛠 TradingView 페이지를 강제로 활성화하는 함수
-function activateTradingViewTab(tabId) {
-    chrome.debugger.attach({ tabId: tabId }, "1.2", () => {
-        chrome.debugger.sendCommand({ tabId: tabId }, "Page.setWebLifecycleState", { state: "active" }, () => {
-            console.log("✅ TradingView 탭이 강제 활성화되었습니다!");
-            chrome.debugger.detach({ tabId: tabId }); // 작업 완료 후 detach
-        });
-    });
-}
-
-// 1분마다 감시하는 함수
-function startTracking() {
-    if (intervalId) {
-        console.log("⚠️ 이미 감시 중...");
-        return;
-    }
-
-    intervalId = setInterval(() => {
-        console.log("🔄 (백그라운드) 1분마다 알람 리스트 요청...");
-
-        chrome.tabs.query({ url: "*://*.tradingview.com/*" }, (tabs) => {
-            if (tabs.length === 0) {
-                console.log("⚠️ 바이낸스 관련 탭이 열려 있지 않음.");
-                return;
-            }
-
-            chrome.scripting.executeScript({
-                target: { tabId: tabs[0].id },
-                func: fetchAlertsFromPage
-            }, (results) => {
-                if (chrome.runtime.lastError) {
-                    console.error("❌ 실행 오류:", chrome.runtime.lastError);
-                    return;
-                }
-                if (results && results[0] && results[0].result) {
-                    console.log("📢 받은 알람 데이터:");
-                    results[0].result.forEach((alert, index) => {
-                        console.log(`📌 [${index + 1}] ${alert}`);
-                    });
-                } else {
-                    console.log("⚠️ 알람 데이터를 받지 못함!");
-                }
-            });
-        });
-    }, 60000); // 1분마다 실행
-
-    console.log("✅ 백그라운드 감시 시작됨!");
-}
-
-// 감시 중지 함수
-function stopTracking() {
-    if (intervalId) {
-        clearInterval(intervalId);
-        intervalId = null;
-        console.log("🛑 백그라운드 감시 중지됨!");
-    } else {
-        console.log("⚠️ 백그라운드 감시가 이미 중지 상태입니다.");
+        "channel": "pricealerts"
     }
 }
+    */
 
-// 메시지 리스너: popup.js에서 온 요청 처리
-chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+chrome.webNavigation.onCompleted.addListener(function(details) {
+    if (details.url.includes('kr.tradingview.com')) {
+      chrome.debugger.attach({tabId: details.tabId}, '1.0', function() {
+        chrome.debugger.sendCommand({tabId: details.tabId}, 'Network.enable');
+        chrome.debugger.sendCommand({tabId: details.tabId}, 'Network.setRequestInterception', {
+          patterns: [{urlPattern: 'wss://pushstream.tradingview.com/*', resourceType: 'WebSocket'}]
+        });
+      });
+    }
+  }, {url: [{urlMatches: 'https://kr.tradingview.com'}]});
+  
+  chrome.debugger.onEvent.addListener(function(debuggeeId, message, params) {
+    if (message === 'Network.webSocketFrameReceived' && params.response) {
+      // 웹소켓 데이터의 payloadData를 파싱
+      const payloadData = params.response.payloadData;
 
-});
+    try {
+        // payloadData가 JSON 형식인 경우에만 파싱 후 처리
+        if (isJSON(payloadData)) {
+          const parsedData = JSON.parse(payloadData);
+    
+          // "channel" 속성이 있고, "private_"로 시작하는 경우만 필터링
+          if (parsedData.channel && parsedData.channel.startsWith("private_")) {
+            console.log('Filtered WebSocket Frame private_로 시작하는:', parsedData);
+            if(parsedData.text?.content?.m !== 'alert_fired') return;
 
+            const alertMessageStr = parsedData.text?.content?.p?.message;
+            const alertNameStr = parsedData.text?.content?.p?.name;
+            const alertTimeStr = convertToKST(parsedData.text?.content?.p?.fire_time);
+            console.log('📌alertNameStr:', alertNameStr);
+            console.log('alertTimeStr:', alertTimeStr);
+            const messageData = JSON.parse(alertMessageStr);
+            console.log("Alert Type:", messageData.type);
+            console.log("Price:", messageData.price);
+            console.log("Stop:", messageData.stop);
+            console.log("Take Profit:", messageData.takeProfit);
+            sendToServerWebhook(alertMessageStr);
+  
+            
+          }
+          
+          }   
+  
+      } catch (error) {
+        console.error('❌ JSON Parsing Error:', error);
+      }
+      
 
-
-
-
-// 🛠 content.js 없이 페이지에서 직접 실행할 함수
-function fetchAlertsFromPage() {
-    console.log("📢 (탭 내 실행) 알람 리스트 가져오기...");
-
-
-    const alerts = [];
-    document.querySelectorAll('[data-name="alert-log-item"]').forEach((item) => {
-        alerts.push(item.innerText.trim());
-    });
-    console.log(`✅ 총 ${alerts.length}개의 알람 감지됨.`);
-    return alerts;
-}
-
-
-
+    }
+  });
 
 
 

@@ -55,3 +55,24 @@ li {
     border-radius: 3px;
     font-size: 12px;
 }
+/* 전체 입력 폼을 정렬 */
+.trade-input {
+    display: flex;
+    align-items: center;  /* 세로 중앙 정렬 */
+    gap: 10px; /* 요소 간 간격 */
+    margin-bottom: 8px; /* 아래 간격 */
+}
+
+/* 라벨을 고정된 너비로 설정하여 정렬 유지 */
+.trade-input label {
+    width: 100px;  /* 라벨 너비 조정 */
+    text-align: right;  /* 라벨을 오른쪽 정렬 */
+}
+
+/* 입력 필드와 셀렉트 박스를 동일한 크기로 설정 */
+.trade-input input,
+.trade-input select {
+    flex: 1;  /* 남은 공간을 채우도록 설정 */
+    min-width: 150px; /* 최소 너비 설정 */
+    padding: 5px;
+}

@@ -15,9 +15,34 @@
     <button id="clearAlertsBtn">알림 리스트 삭제</button>
     <h1>Webhook Test</h1>
 
+    <h3>📌 매매 정보 입력</h3>
 
-
+    <div class="trade-input">
+        <label for="tradeType">거래 유형:</label>
+        <select id="tradeType">
+            <option value="Long">Long</option>
+            <option value="Short">Short</option>
+        </select>
+    </div>
+    
+    <div class="trade-input">
+        <label for="price">가격:</label>
+        <input type="number" id="price" step="0.0001">
+    </div>
+    
+    <div class="trade-input">
+        <label for="stopLoss">손절가:</label>
+        <input type="number" id="stopLoss" step="0.0001">
+    </div>
+    
+    <div class="trade-input">
+        <label for="takeProfit">익절가:</label>
+        <input type="number" id="takeProfit" step="0.0001">
+    </div>
+    
     <button id="testWebhookButton">웹훅 테스트 보내기</button>
+
+
 
     <h1>백그라운드 감시</h1>
     <button id="startTracking">⏳ 감시 시작</button>

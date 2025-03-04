@@ -1,0 +1,492 @@
+{
+    "id": 187,
+    "channel": "private_G-dVFA61MF8zneyz6P4yt2-Ole1276V1qXpaSFviirQ",
+    "text": {
+        "content": {
+            "m": "alerts_updated",
+            "p": [
+                {
+                    "active": true,
+                    "sound_file": null,
+                    "symbol": "={\"symbol\":\"BINANCE:XRPUSDT\",\"adjustment\":\"splits\",\"session\":\"extended\",\"currency-id\":\"XTVCUSDT\"}",
+                    "popup": true,
+                    "presentation_data": {
+                        "studies": {
+                            "StrategyScript$USER;05f31713ac234746bdae505705337c2f@tv-scripting-101_159.0": {
+                                "has_alert_function": true,
+                                "plots": {
+                                    "plot_1": {
+                                        "title": "Basis",
+                                        "type": "line"
+                                    },
+                                    "plot_2": {
+                                        "title": "Upper Band",
+                                        "type": "line"
+                                    },
+                                    "plot_3": {
+                                        "title": "Lower Band",
+                                        "type": "line"
+                                    }
+                                },
+                                "short_description": "MinAlert Strategy",
+                                "format_type": "price",
+                                "history_calculation_may_change": true,
+                                "description": "MinAlert Strategy"
+                            }
+                        },
+                        "mutable_study_data": {
+                            "StrategyScript$USER;05f31713ac234746bdae505705337c2f@tv-scripting-101_159.0_0": {
+                                "titles": {
+                                    "title": "MinAlert Strategy (26, 52, 18, 12, 26, 9, 20, 2, 14, 1)",
+                                    "short_title": "MinAlert Strategy (26, 52, 18, 12, 26, 9, 20, 2, 14, 1)"
+                                }
+                            }
+                        },
+                        "main_series": {
+                            "base-currency-logoid": "crypto/XTVCXRP",
+                            "pricescale": 10000,
+                            "type": "spot",
+                            "formatter": "price",
+                            "currency-logoid": "crypto/XTVCUSDT",
+                            "minmovement": 1
+                        }
+                    },
+                    "condition": {
+                        "type": "strategy",
+                        "strategy_mode": "alerts",
+                        "frequency": "60",
+                        "series": [
+                            {
+                                "pine_version": "159.0",
+                                "offsets_by_plot": {
+                                    "plot_1": 0,
+                                    "plot_2": 0,
+                                    "plot_3": 0
+                                },
+                                "type": "study",
+                                "inputs": {
+                                    "in_15": 0,
+                                    "in_21": false,
+                                    "in_4": 26,
+                                    "in_32": false,
+                                    "in_28": "",
+                                    "in_5": 9,
+                                    "in_0": 26,
+                                    "in_31": false,
+                                    "in_2": 18,
+                                    "__log_level": 0,
+                                    "in_6": 20,
+                                    "in_7": 2,
+                                    "in_30": false,
+                                    "in_26": "",
+                                    "in_10": "percent",
+                                    "in_3": 12,
+                                    "in_16": "fixed",
+                                    "in_27": "order_fills",
+                                    "in_24": 0,
+                                    "in_13": false,
+                                    "in_19": "NONE",
+                                    "in_12": 1,
+                                    "in_25": "BACKTEST",
+                                    "in_18": 1000000,
+                                    "in_8": 14,
+                                    "pineFeatures": "{\"strategy\":1,\"plot\":1,\"str\":1,\"ta\":1,\"alert\":1,\"log\":1}",
+                                    "__profile": false,
+                                    "in_9": 1,
+                                    "in_11": 0.02,
+                                    "in_17": 1,
+                                    "in_23": 0,
+                                    "in_22": "FIFO",
+                                    "in_20": 0,
+                                    "in_29": 2,
+                                    "in_1": 52,
+                                    "in_14": false
+                                },
+                                "study": "StrategyScript@tv-scripting-101",
+                                "pine_id": "USER;05f31713ac234746bdae505705337c2f"
+                            }
+                        ]
+                    },
+                    "complexity": "complex",
+                    "last_fire_bar_time": "2025-02-26T14:01:00Z",
+                    "resolution": "1",
+                    "last_stop_reason": "manual",
+                    "last_error": null,
+                    "kinds": [
+                        "regular"
+                    ],
+                    "create_time": "2025-02-26T11:10:51Z",
+                    "sms_over_email": false,
+                    "cross_interval": false,
+                    "email": false,
+                    "message": "",
+                    "alert_id": 1981512860,
+                    "expiration": "2025-03-26T11:10:30Z",
+                    "mobile_push": false,
+                    "sound_duration": 0,
+                    "last_fire_time": "2025-02-26T14:02:01Z",
+                    "type": "strategy",
+                    "auto_deactivate": false,
+                    "name": "MinAlert Strategy (26, 52, 18, 12, 26, 9, 20, 2, 14, 1): alert() 펑크션 콜 온리",
+                    "web_hook": null
+                }
+            ],
+            "id": "7psg-4010719"
+        },
+        "channel": "pricealerts"
+    }
+}
+
+{
+    "id": 188,
+    "channel": "private_G-dVFA61MF8zneyz6P4yt2-Ole1276V1qXpaSFviirQ",
+    "text": {
+        "content": "{\"m\":\"alert_running\",\"p\":{\"id\":1981512860,\"exp\":1742987430,\"inst_id\":1740736436380233,\"user_id\":19042241,\"cross_int\":false,\"inf_exp\":false,\"deact\":false,\"email\":false,\"sms\":false,\"telegram\":false,\"snd\":false,\"popup\":true,\"active\":true,\"ns_only_fire\":true,\"push\":false,\"sym\":\"BINANCE:XRPUSDT\",\"internal_sym\":\"={\\\"symbol\\\":\\\"BINANCE:XRPUSDT\\\",\\\"adjustment\\\":\\\"splits\\\",\\\"session\\\":\\\"extended\\\",\\\"currency-id\\\":\\\"XTVCUSDT\\\"}\",\"res\":\"1\",\"desc\":\"\",\"extra\":\"{\\\"version\\\":22,\\\"condition\\\":{\\\"id\\\":\\\"alerts\\\",\\\"fireInfo\\\":{\\\"frequency\\\":\\\"60\\\"},\\\"mainSeries\\\":{\\\"id\\\":\\\"-1522692763\\\",\\\"plotIndex\\\":null},\\\"alertSeries\\\":{\\\"id\\\":\\\"53667880\\\",\\\"plotIndex\\\":null},\\\"band\\\":null,\\\"lowerBand\\\":null,\\\"upperBand\\\":null,\\\"movValue\\\":null,\\\"movPeriod\\\":null},\\\"statesForAlert\\\":{\\\"-1522692763\\\":{\\\"id\\\":\\\"-1522692763\\\",\\\"uniqueId\\\":\\\"-1522692763\\\",\\\"type\\\":\\\"MainSeries\\\",\\\"proSymbol\\\":\\\"BINANCE:XRPUSDT\\\",\\\"actualSymbol\\\":\\\"BINANCE:XRPUSDT\\\",\\\"symbolString\\\":\\\"={\\\\\\\"adjustment\\\\\\\":\\\\\\\"splits\\\\\\\",\\\\\\\"currency-id\\\\\\\":\\\\\\\"XTVCUSDT\\\\\\\",\\\\\\\"session\\\\\\\":\\\\\\\"extended\\\\\\\",\\\\\\\"symbol\\\\\\\":\\\\\\\"BINANCE:XRPUSDT\\\\\\\"}\\\",\\\"interval\\\":\\\"1\\\",\\\"style\\\":1,\\\"styleInputs\\\":{},\\\"extendedHours\\\":null,\\\"dividendsAdjustment\\\":false,\\\"isSpread\\\":false,\\\"sessionId\\\":\\\"regular\\\",\\\"sessionDescription\\\":null,\\\"backAdjustment\\\":false,\\\"settlementAsClose\\\":false,\\\"value\\\":null,\\\"scriptIdPart\\\":null,\\\"scriptVersion\\\":null,\\\"plotIndex\\\":null,\\\"plotOffset\\\":null,\\\"fullId\\\":null,\\\"isTVScript\\\":null,\\\"hasAlertFunction\\\":null,\\\"isTVScriptStrategy\\\":null,\\\"isTVLibrary\\\":null,\\\"plots\\\":null,\\\"points\\\":null,\\\"inputs\\\":null,\\\"studyDependencies\\\":null,\\\"callStudyDependencies\\\":null,\\\"alerts\\\":null,\\\"title\\\":\\\"\\\",\\\"shortTitle\\\":\\\"\\\",\\\"shortDescription\\\":\\\"\\\",\\\"formatter\\\":{\\\"type\\\":\\\"price\\\",\\\"state\\\":{\\\"priceScale\\\":10000,\\\"minMove\\\":1,\\\"minMove2\\\":0,\\\"fractional\\\":false,\\\"fractionalLength\\\":4,\\\"ignoreMinMove\\\":false}},\\\"dangerReason\\\":\\\"\\\",\\\"boxSize\\\":null,\\\"reversalAmount\\\":null,\\\"defaultStrategyAlertMessage\\\":null},\\\"53667880\\\":{\\\"id\\\":\\\"53667880\\\",\\\"uniqueId\\\":\\\"53667880\\\",\\\"type\\\":\\\"StudyStrategy\\\",\\\"proSymbol\\\":null,\\\"actualSymbol\\\":null,\\\"symbolString\\\":null,\\\"interval\\\":null,\\\"style\\\":null,\\\"styleInputs\\\":null,\\\"extendedHours\\\":null,\\\"dividendsAdjustment\\\":null,\\\"isSpread\\\":null,\\\"sessionId\\\":null,\\\"sessionDescription\\\":null,\\\"backAdjustment\\\":null,\\\"settlementAsClose\\\":null,\\\"value\\\":null,\\\"scriptIdPart\\\":\\\"USER;05f31713ac234746bdae505705337c2f\\\",\\\"scriptVersion\\\":\\\"159.0\\\",\\\"plotIndex\\\":null,\\\"plotOffset\\\":null,\\\"fullId\\\":\\\"StrategyScript$USER;05f31713ac234746bdae505705337c2f@tv-scripting-101\\\",\\\"isTVScript\\\":true,\\\"hasAlertFunction\\\":true,\\\"isTVScriptStrategy\\\":true,\\\"isTVLibrary\\\":false,\\\"plots\\\":[{\\\"id\\\":\\\"plot_1\\\",\\\"type\\\":\\\"line\\\",\\\"pinePlotIndex\\\":1,\\\"offset\\\":0,\\\"title\\\":\\\"Basis\\\",\\\"text\\\":\\\"\\\"},{\\\"id\\\":\\\"plot_2\\\",\\\"type\\\":\\\"line\\\",\\\"pinePlotIndex\\\":2,\\\"offset\\\":0,\\\"title\\\":\\\"Upper Band\\\",\\\"text\\\":\\\"\\\"},{\\\"id\\\":\\\"plot_3\\\",\\\"type\\\":\\\"line\\\",\\\"pinePlotIndex\\\":3,\\\"offset\\\":0,\\\"title\\\":\\\"Lower Band\\\",\\\"text\\\":\\\"\\\"}],\\\"points\\\":null,\\\"inputs\\\":{\\\"__log_level\\\":{\\\"v\\\":0,\\\"f\\\":true,\\\"t\\\":\\\"integer\\\"},\\\"__profile\\\":{\\\"v\\\":false,\\\"f\\\":true,\\\"t\\\":\\\"bool\\\"},\\\"in_0\\\":{\\\"v\\\":26,\\\"f\\\":true,\\\"t\\\":\\\"integer\\\"},\\\"in_1\\\":{\\\"v\\\":52,\\\"f\\\":true,\\\"t\\\":\\\"integer\\\"},\\\"in_10\\\":{\\\"v\\\":\\\"percent\\\",\\\"f\\\":true,\\\"t\\\":\\\"text\\\",\\\"internalID\\\":\\\"commission_type\\\"},\\\"in_11\\\":{\\\"v\\\":0.02,\\\"f\\\":true,\\\"t\\\":\\\"float\\\",\\\"internalID\\\":\\\"commission_value\\\"},\\\"in_12\\\":{\\\"v\\\":1,\\\"f\\\":true,\\\"t\\\":\\\"integer\\\",\\\"internalID\\\":\\\"pyramiding\\\"},\\\"in_13\\\":{\\\"v\\\":false,\\\"f\\\":true,\\\"t\\\":\\\"bool\\\",\\\"internalID\\\":\\\"calc_on_order_fills\\\"},\\\"in_14\\\":{\\\"v\\\":false,\\\"f\\\":true,\\\"t\\\":\\\"bool\\\",\\\"internalID\\\":\\\"calc_on_every_tick\\\"},\\\"in_15\\\":{\\\"v\\\":0,\\\"f\\\":true,\\\"t\\\":\\\"integer\\\",\\\"internalID\\\":\\\"backtest_fill_limits_assumption\\\"},\\\"in_16\\\":{\\\"v\\\":\\\"fixed\\\",\\\"f\\\":true,\\\"t\\\":\\\"text\\\",\\\"internalID\\\":\\\"default_qty_type\\\"},\\\"in_17\\\":{\\\"v\\\":1,\\\"f\\\":true,\\\"t\\\":\\\"float\\\",\\\"internalID\\\":\\\"default_qty_value\\\"},\\\"in_18\\\":{\\\"v\\\":1000000,\\\"f\\\":true,\\\"t\\\":\\\"float\\\",\\\"internalID\\\":\\\"initial_capital\\\"},\\\"in_19\\\":{\\\"v\\\":\\\"NONE\\\",\\\"f\\\":true,\\\"t\\\":\\\"text\\\",\\\"internalID\\\":\\\"currency\\\"},\\\"in_2\\\":{\\\"v\\\":18,\\\"f\\\":true,\\\"t\\\":\\\"integer\\\"},\\\"in_20\\\":{\\\"v\\\":0,\\\"f\\\":true,\\\"t\\\":\\\"integer\\\",\\\"internalID\\\":\\\"slippage\\\"},\\\"in_21\\\":{\\\"v\\\":false,\\\"f\\\":true,\\\"t\\\":\\\"bool\\\",\\\"internalID\\\":\\\"process_orders_on_close\\\"},\\\"in_22\\\":{\\\"v\\\":\\\"FIFO\\\",\\\"f\\\":true,\\\"t\\\":\\\"text\\\",\\\"internalID\\\":\\\"close_entries_rule\\\"},\\\"in_23\\\":{\\\"v\\\":0,\\\"f\\\":true,\\\"t\\\":\\\"float\\\",\\\"internalID\\\":\\\"margin_long\\\"},\\\"in_24\\\":{\\\"v\\\":0,\\\"f\\\":true,\\\"t\\\":\\\"float\\\",\\\"internalID\\\":\\\"margin_short\\\"},\\\"in_25\\\":{\\\"v\\\":\\\"ALERT\\\",\\\"f\\\":true,\\\"t\\\":\\\"text\\\",\\\"internalID\\\":\\\"run_mode\\\"},\\\"in_26\\\":{\\\"v\\\":\\\"\\\",\\\"f\\\":true,\\\"t\\\":\\\"text\\\",\\\"internalID\\\":\\\"alert_message\\\"},\\\"in_27\\\":{\\\"v\\\":\\\"order_fills\\\",\\\"f\\\":true,\\\"t\\\":\\\"text\\\",\\\"internalID\\\":\\\"alert_type\\\"},\\\"in_28\\\":{\\\"v\\\":\\\"\\\",\\\"f\\\":true,\\\"t\\\":\\\"text\\\"},\\\"in_29\\\":{\\\"v\\\":2,\\\"f\\\":true,\\\"t\\\":\\\"float\\\",\\\"internalID\\\":\\\"risk_free_rate\\\"},\\\"in_3\\\":{\\\"v\\\":12,\\\"f\\\":true,\\\"t\\\":\\\"integer\\\"},\\\"in_30\\\":{\\\"v\\\":false,\\\"f\\\":true,\\\"t\\\":\\\"bool\\\",\\\"internalID\\\":\\\"use_bar_magnifier\\\"},\\\"in_31\\\":{\\\"v\\\":false,\\\"f\\\":true,\\\"t\\\":\\\"bool\\\",\\\"internalID\\\":\\\"fill_orders_on_standard_ohlc\\\"},\\\"in_32\\\":{\\\"v\\\":false,\\\"f\\\":true,\\\"t\\\":\\\"bool\\\"},\\\"in_4\\\":{\\\"v\\\":26,\\\"f\\\":true,\\\"t\\\":\\\"integer\\\"},\\\"in_5\\\":{\\\"v\\\":9,\\\"f\\\":true,\\\"t\\\":\\\"integer\\\"},\\\"in_6\\\":{\\\"v\\\":20,\\\"f\\\":true,\\\"t\\\":\\\"integer\\\"},\\\"in_7\\\":{\\\"v\\\":2,\\\"f\\\":true,\\\"t\\\":\\\"float\\\"},\\\"in_8\\\":{\\\"v\\\":14,\\\"f\\\":true,\\\"t\\\":\\\"integer\\\"},\\\"in_9\\\":{\\\"v\\\":1,\\\"f\\\":true,\\\"t\\\":\\\"float\\\"},\\\"pineFeatures\\\":{\\\"v\\\":\\\"{\\\\\\\"strategy\\\\\\\":1,\\\\\\\"plot\\\\\\\":1,\\\\\\\"str\\\\\\\":1,\\\\\\\"ta\\\\\\\":1,\\\\\\\"alert\\\\\\\":1,\\\\\\\"log\\\\\\\":1}\\\",\\\"f\\\":true,\\\"t\\\":\\\"text\\\"},\\\"pineId\\\":\\\"USER;05f31713ac234746bdae505705337c2f\\\",\\\"pineVersion\\\":\\\"159.0\\\",\\\"text\\\":\\\"bmI9Ks46_1R231PN2xX+LdCMrJ2Wo6A==_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\\\"},\\\"studyDependencies\\\":[{\\\"study\\\":\\\"StrategyScript@tv-scripting-101!\\\",\\\"id\\\":\\\"53667880\\\",\\\"inputs\\\":{\\\"__log_level\\\":{\\\"v\\\":0,\\\"f\\\":true,\\\"t\\\":\\\"integer\\\"},\\\"__profile\\\":{\\\"v\\\":false,\\\"f\\\":true,\\\"t\\\":\\\"bool\\\"},\\\"in_0\\\":{\\\"v\\\":26,\\\"f\\\":true,\\\"t\\\":\\\"integer\\\"},\\\"in_1\\\":{\\\"v\\\":52,\\\"f\\\":true,\\\"t\\\":\\\"integer\\\"},\\\"in_10\\\":{\\\"v\\\":\\\"percent\\\",\\\"f\\\":true,\\\"t\\\":\\\"text\\\",\\\"internalID\\\":\\\"commission_type\\\"},\\\"in_11\\\":{\\\"v\\\":0.02,\\\"f\\\":true,\\\"t\\\":\\\"float\\\",\\\"internalID\\\":\\\"commission_value\\\"},\\\"in_12\\\":{\\\"v\\\":1,\\\"f\\\":true,\\\"t\\\":\\\"integer\\\",\\\"internalID\\\":\\\"pyramiding\\\"},\\\"in_13\\\":{\\\"v\\\":false,\\\"f\\\":true,\\\"t\\\":\\\"bool\\\",\\\"internalID\\\":\\\"calc_on_order_fills\\\"},\\\"in_14\\\":{\\\"v\\\":false,\\\"f\\\":true,\\\"t\\\":\\\"bool\\\",\\\"internalID\\\":\\\"calc_on_every_tick\\\"},\\\"in_15\\\":{\\\"v\\\":0,\\\"f\\\":true,\\\"t\\\":\\\"integer\\\",\\\"internalID\\\":\\\"backtest_fill_limits_assumption\\\"},\\\"in_16\\\":{\\\"v\\\":\\\"fixed\\\",\\\"f\\\":true,\\\"t\\\":\\\"text\\\",\\\"internalID\\\":\\\"default_qty_type\\\"},\\\"in_17\\\":{\\\"v\\\":1,\\\"f\\\":true,\\\"t\\\":\\\"float\\\",\\\"internalID\\\":\\\"default_qty_value\\\"},\\\"in_18\\\":{\\\"v\\\":1000000,\\\"f\\\":true,\\\"t\\\":\\\"float\\\",\\\"internalID\\\":\\\"initial_capital\\\"},\\\"in_19\\\":{\\\"v\\\":\\\"NONE\\\",\\\"f\\\":true,\\\"t\\\":\\\"text\\\",\\\"internalID\\\":\\\"currency\\\"},\\\"in_2\\\":{\\\"v\\\":18,\\\"f\\\":true,\\\"t\\\":\\\"integer\\\"},\\\"in_20\\\":{\\\"v\\\":0,\\\"f\\\":true,\\\"t\\\":\\\"integer\\\",\\\"internalID\\\":\\\"slippage\\\"},\\\"in_21\\\":{\\\"v\\\":false,\\\"f\\\":true,\\\"t\\\":\\\"bool\\\",\\\"internalID\\\":\\\"process_orders_on_close\\\"},\\\"in_22\\\":{\\\"v\\\":\\\"FIFO\\\",\\\"f\\\":true,\\\"t\\\":\\\"text\\\",\\\"internalID\\\":\\\"close_entries_rule\\\"},\\\"in_23\\\":{\\\"v\\\":0,\\\"f\\\":true,\\\"t\\\":\\\"float\\\",\\\"internalID\\\":\\\"margin_long\\\"},\\\"in_24\\\":{\\\"v\\\":0,\\\"f\\\":true,\\\"t\\\":\\\"float\\\",\\\"internalID\\\":\\\"margin_short\\\"},\\\"in_25\\\":{\\\"v\\\":\\\"ALERT\\\",\\\"f\\\":true,\\\"t\\\":\\\"text\\\",\\\"internalID\\\":\\\"run_mode\\\"},\\\"in_26\\\":{\\\"v\\\":\\\"\\\",\\\"f\\\":true,\\\"t\\\":\\\"text\\\",\\\"internalID\\\":\\\"alert_message\\\"},\\\"in_27\\\":{\\\"v\\\":\\\"order_fills\\\",\\\"f\\\":true,\\\"t\\\":\\\"text\\\",\\\"internalID\\\":\\\"alert_type\\\"},\\\"in_28\\\":{\\\"v\\\":\\\"\\\",\\\"f\\\":true,\\\"t\\\":\\\"text\\\"},\\\"in_29\\\":{\\\"v\\\":2,\\\"f\\\":true,\\\"t\\\":\\\"float\\\",\\\"internalID\\\":\\\"risk_free_rate\\\"},\\\"in_3\\\":{\\\"v\\\":12,\\\"f\\\":true,\\\"t\\\":\\\"integer\\\"},\\\"in_30\\\":{\\\"v\\\":false,\\\"f\\\":true,\\\"t\\\":\\\"bool\\\",\\\"internalID\\\":\\\"use_bar_magnifier\\\"},\\\"in_31\\\":{\\\"v\\\":false,\\\"f\\\":true,\\\"t\\\":\\\"bool\\\",\\\"internalID\\\":\\\"fill_orders_on_standard_ohlc\\\"},\\\"in_32\\\":{\\\"v\\\":false,\\\"f\\\":true,\\\"t\\\":\\\"bool\\\"},\\\"in_4\\\":{\\\"v\\\":26,\\\"f\\\":true,\\\"t\\\":\\\"integer\\\"},\\\"in_5\\\":{\\\"v\\\":9,\\\"f\\\":true,\\\"t\\\":\\\"integer\\\"},\\\"in_6\\\":{\\\"v\\\":20,\\\"f\\\":true,\\\"t\\\":\\\"integer\\\"},\\\"in_7\\\":{\\\"v\\\":2,\\\"f\\\":true,\\\"t\\\":\\\"float\\\"},\\\"in_8\\\":{\\\"v\\\":14,\\\"f\\\":true,\\\"t\\\":\\\"integer\\\"},\\\"in_9\\\":{\\\"v\\\":1,\\\"f\\\":true,\\\"t\\\":\\\"float\\\"},\\\"pineFeatures\\\":{\\\"v\\\":\\\"{\\\\\\\"strategy\\\\\\\":1,\\\\\\\"plot\\\\\\\":1,\\\\\\\"str\\\\\\\":1,\\\\\\\"ta\\\\\\\":1,\\\\\\\"alert\\\\\\\":1,\\\\\\\"log\\\\\\\":1}\\\",\\\"f\\\":true,\\\"t\\\":\\\"text\\\"},\\\"pineId\\\":\\\"USER;05f31713ac234746bdae505705337c2f\\\",\\\"pineVersion\\\":\\\"159.0\\\",\\\"text\\\":\\\"bmI9Ks46_1R231PN2xX+LdCMrJ2Wo6A==_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\\\"}}],\\\"callStudyDependencies\\\":\\\"[]\\\",\\\"alerts\\\":null,\\\"title\\\":\\\"MinAlert Strategy (26, 52, 18, 12, 26, 9, 20, 2, 14, 1)\\\",\\\"shortTitle\\\":\\\"MinAlert Strategy (26, 52, 18, 12, 26, 9, 20, 2, 14, 1)\\\",\\\"shortDescription\\\":\\\"MinAlert Strategy\\\",\\\"formatter\\\":{\\\"type\\\":\\\"price\\\",\\\"state\\\":{\\\"priceScale\\\":10000,\\\"minMove\\\":1,\\\"minMove2\\\":0,\\\"fractional\\\":false,\\\"fractionalLength\\\":4,\\\"ignoreMinMove\\\":true}},\\\"dangerReason\\\":\\\"pine-repainting\\\",\\\"boxSize\\\":null,\\\"reversalAmount\\\":null,\\\"defaultStrategyAlertMessage\\\":null}},\\\"message\\\":\\\"\\\"}\",\"alert_type\":\"strategy\",\"error\":\"\",\"stop\":\"manual\",\"script\":\"\",\"snd_file\":\"alert/fired\",\"create_t\":1740568251,\"fire_bar_time\":1740578460,\"fire_time\":1740578521,\"start_t\":1740736436,\"stop_t\":1740578911,\"name\":\"MinAlert Strategy (26, 52, 18, 12, 26, 9, 20, 2, 14, 1): alert() 펑크션 콜 온리\",\"eng\":\"nje1-32-alerts-3\",\"web_hook\":null,\"snd_duration\":0,\"cond\":{},\"gen_alert_data\":{\"needs_auth_deps\":[]},\"inputs\":{\"__log_level\":{\"v\":0,\"f\":true,\"t\":\"integer\"},\"__profile\":{\"v\":false,\"f\":true,\"t\":\"bool\"},\"in_0\":{\"v\":26,\"f\":true,\"t\":\"integer\"},\"in_1\":{\"v\":52,\"f\":true,\"t\":\"integer\"},\"in_10\":{\"v\":\"percent\",\"f\":true,\"t\":\"text\",\"internalID\":\"commission_type\"},\"in_11\":{\"v\":0.02,\"f\":true,\"t\":\"float\",\"internalID\":\"commission_value\"},\"in_12\":{\"v\":1,\"f\":true,\"t\":\"integer\",\"internalID\":\"pyramiding\"},\"in_13\":{\"v\":false,\"f\":true,\"t\":\"bool\",\"internalID\":\"calc_on_order_fills\"},\"in_14\":{\"v\":false,\"f\":true,\"t\":\"bool\",\"internalID\":\"calc_on_every_tick\"},\"in_15\":{\"v\":0,\"f\":true,\"t\":\"integer\",\"internalID\":\"backtest_fill_limits_assumption\"},\"in_16\":{\"v\":\"fixed\",\"f\":true,\"t\":\"text\",\"internalID\":\"default_qty_type\"},\"in_17\":{\"v\":1,\"f\":true,\"t\":\"float\",\"internalID\":\"default_qty_value\"},\"in_18\":{\"v\":1000000,\"f\":true,\"t\":\"float\",\"internalID\":\"initial_capital\"},\"in_19\":{\"v\":\"NONE\",\"f\":true,\"t\":\"text\",\"internalID\":\"currency\"},\"in_2\":{\"v\":18,\"f\":true,\"t\":\"integer\"},\"in_20\":{\"v\":0,\"f\":true,\"t\":\"integer\",\"internalID\":\"slippage\"},\"in_21\":{\"v\":false,\"f\":true,\"t\":\"bool\",\"internalID\":\"process_orders_on_close\"},\"in_22\":{\"v\":\"FIFO\",\"f\":true,\"t\":\"text\",\"internalID\":\"close_entries_rule\"},\"in_23\":{\"v\":0,\"f\":true,\"t\":\"float\",\"internalID\":\"margin_long\"},\"in_24\":{\"v\":0,\"f\":true,\"t\":\"float\",\"internalID\":\"margin_short\"},\"in_25\":{\"v\":\"ALERT\",\"f\":true,\"t\":\"text\",\"internalID\":\"run_mode\"},\"in_26\":{\"v\":\"\",\"f\":true,\"t\":\"text\",\"internalID\":\"alert_message\"},\"in_27\":{\"v\":\"alerts\",\"f\":true,\"t\":\"text\",\"internalID\":\"alert_type\"},\"in_28\":{\"v\":\"\",\"f\":true,\"t\":\"text\"},\"in_29\":{\"v\":2,\"f\":true,\"t\":\"float\",\"internalID\":\"risk_free_rate\"},\"in_3\":{\"v\":12,\"f\":true,\"t\":\"integer\"},\"in_30\":{\"v\":false,\"f\":true,\"t\":\"bool\",\"internalID\":\"use_bar_magnifier\"},\"in_31\":{\"v\":false,\"f\":true,\"t\":\"bool\",\"internalID\":\"fill_orders_on_standard_ohlc\"},\"in_32\":{\"v\":false,\"f\":true,\"t\":\"bool\"},\"in_4\":{\"v\":26,\"f\":true,\"t\":\"integer\"},\"in_5\":{\"v\":9,\"f\":true,\"t\":\"integer\"},\"in_6\":{\"v\":20,\"f\":true,\"t\":\"integer\"},\"in_7\":{\"v\":2,\"f\":true,\"t\":\"float\"},\"in_8\":{\"v\":14,\"f\":true,\"t\":\"integer\"},\"in_9\":{\"v\":1,\"f\":true,\"t\":\"float\"},\"pineFeatures\":{\"v\":\"{\\\"strategy\\\":1,\\\"plot\\\":1,\\\"str\\\":1,\\\"ta\\\":1,\\\"alert\\\":1,\\\"log\\\":1}\",\"f\":true,\"t\":\"text\"},\"pineId\":\"USER;05f31713ac234746bdae505705337c2f\",\"pineVersion\":\"159.0\",\"text\":\"bmI9Ks46_1R231PN2xX+LdCMrJ2Wo6A==_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\"}}}",
+        "channel": "alert"
+    }
+}
+
+{
+    "id": 189,
+    "channel": "private_G-dVFA61MF8zneyz6P4yt2-Ole1276V1qXpaSFviirQ",
+    "text": {
+        "content": {
+            "m": "alert_fired",
+            "p": {
+                "fire_id": 31659826109,
+                "sound_file": null,
+                "symbol": "={\"adjustment\":\"splits\",\"currency-id\":\"XTVCUSDT\",\"session\":\"extended\",\"symbol\":\"BINANCE:XRPUSDT\"}",
+                "cross_interval": false,
+                "popup": true,
+                "message": "{\"type\":\"LongTakeProfit1\",\"price\":2.0554,\"stop\":2.0500046495,\"takeProfit\":2.0553387347}",
+                "alert_id": 1981512860,
+                "sound_duration": 0,
+                "fire_time": "2025-02-28T09:54:01Z",
+                "kinds": [
+                    "regular"
+                ],
+                "name": "MinAlert Strategy (26, 52, 18, 12, 26, 9, 20, 2, 14, 1): alert() 펑크션 콜 온리",
+                "resolution": "1",
+                "bar_time": "2025-02-28T09:53:00Z"
+            },
+            "id": "6wjy-3911738"
+        },
+        "channel": "pricealerts"
+    }
+}
+
+{
+    "id": 190,
+    "channel": "private_G-dVFA61MF8zneyz6P4yt2-Ole1276V1qXpaSFviirQ",
+    "text": {
+        "content": "{\"m\":\"event\",\"p\":{\"id\":31659826109,\"aid\":1981512860,\"fire_time\":1740736441,\"bar_time\":1740736380,\"sym\":\"BINANCE:XRPUSDT\",\"res\":\"1\",\"desc\":\"{\\\"type\\\":\\\"LongTakeProfit1\\\",\\\"price\\\":2.0554,\\\"stop\\\":2.0500046495,\\\"takeProfit\\\":2.0553387347}\",\"snd_file\":\"alert/fired\",\"snd\":false,\"popup\":true,\"cross_int\":false,\"name\":\"MinAlert Strategy (26, 52, 18, 12, 26, 9, 20, 2, 14, 1): alert() 펑크션 콜 온리\",\"snd_duration\":0}}",
+        "channel": "alert"
+    }
+}
+
+
+
+
+
+
+
+wss://pushstream.tradingview.com/message-pipe-ws/private_G-dVFA61MF8zneyz6P4yt2-Ole1276V1qXpaSFviirQ
+
+{
+  "id": 24,
+  "channel": "private_G-dVFA61MF8zneyz6P4yt2-Ole1276V1qXpaSFviirQ",
+  "text": {
+    "content": {
+      "m": "alert_fired",
+      "p": {
+        "fire_id": 31650047984,
+        "sound_file": null,
+        "symbol": "={\"adjustment\":\"splits\",\"currency-id\":\"XTVCUSDT\",\"session\":\"extended\",\"symbol\":\"BINANCE:XRPUSDT\"}",
+        "cross_interval": true,
+        "popup": true,
+        "message": "XRPUSDT 채널안 (상한: 2.5000, 하한:2.0000)",
+        "alert_id": 1982263870,
+        "sound_duration": 0,
+        "fire_time": "2025-02-28T04:43:01Z",
+        "kinds": [
+          "regular"
+        ],
+        "name": null,
+        "resolution": "1",
+        "bar_time": "2025-02-28T04:43:00Z"
+      },
+      "id": "kg4g-61605674"
+    },
+    "channel": "pricealerts"
+  }
+}
+
+
+{
+    "id": 24,
+    "channel": "private_G-dVFA61MF8zneyz6P4yt2-Ole1276V1qXpaSFviirQ",
+    "text": {
+        "content": {
+            "m": "alert_fired",
+            "p": {
+                "fire_id": 31650047984,
+                "sound_file": null,
+                "symbol": "={\"adjustment\":\"splits\",\"currency-id\":\"XTVCUSDT\",\"session\":\"extended\",\"symbol\":\"BINANCE:XRPUSDT\"}",
+                "cross_interval": true,
+                "popup": true,
+                "message": "XRPUSDT 채널안 (상한: 2.5000, 하한:2.0000)",
+                "alert_id": 1982263870,
+                "sound_duration": 0,
+                "fire_time": "2025-02-28T04:43:01Z",
+                "kinds": [
+                    "regular"
+                ],
+                "name": null,
+                "resolution": "1",
+                "bar_time": "2025-02-28T04:43:00Z"
+            },
+            "id": "kg4g-61605674"
+        },
+        "channel": "pricealerts"
+    }
+}
+
+
+{
+    "requestId": "18480.32015",
+    "response": {
+        "mask": false,
+        "opcode": 1,
+        "payloadData": "{\"id\":2,\"channel\":\"private_G-dVFA61MF8zneyz6P4yt2-Ole1276V1qXpaSFviirQ\",\"text\":{\"content\":\"{\\\"m\\\":\\\"event\\\",\\\"p\\\":{\\\"id\\\":31654404100,\\\"aid\\\":1990251143,\\\"fire_time\\\":1740726421,\\\"bar_time\\\":1740726420,\\\"sym\\\":\\\"BINANCE:XRPUSDT\\\",\\\"res\\\":\\\"1\\\",\\\"desc\\\":\\\"XRPUSDT 채널안 (상한: 2.6000, 하한:1.9000)\\\",\\\"snd_file\\\":\\\"alert\\/fired\\\",\\\"snd\\\":false,\\\"popup\\\":true,\\\"cross_int\\\":true,\\\"name\\\":null,\\\"snd_duration\\\":0}}\",\"channel\":\"alert\"}}"
+    },
+    "timestamp": 25299.632724
+}
+
+{
+    "requestId": "4212.5883",
+    "response": {
+        "mask": false,
+        "opcode": 1,
+        "payloadData": "{\"id\":2,\"channel\":\"private_G-dVFA61MF8zneyz6P4yt2-Ole1276V1qXpaSFviirQ\",\"text\":{\"content\":{\"m\":\"alert_fired\",\"p\":{\"fire_id\":31656164874,\"sound_file\":null,\"symbol\":\"={\\\"adjustment\\\":\\\"splits\\\",\\\"currency-id\\\":\\\"XTVCUSDT\\\",\\\"session\\\":\\\"extended\\\",\\\"symbol\\\":\\\"BINANCE:XRPUSDT\\\"}\",\"cross_interval\":true,\"popup\":true,\"message\":\"XRPUSDT 채널안 (상한: 2.6000, 하한:1.9000)\",\"alert_id\":1990251143,\"sound_duration\":0,\"fire_time\":\"2025-02-28T08:02:01Z\",\"kinds\":[\"regular\"],\"name\":null,\"resolution\":\"1\",\"bar_time\":\"2025-02-28T08:02:00Z\"},\"id\":\"6wjy-1170279\"},\"channel\":\"pricealerts\"}}"
+    },
+    "timestamp": 28599.92403
+}
+
+
+
+  chrome.debugger.onEvent.addListener(function(debuggeeId, message, params) {
+    if (message === 'Network.webSocketFrameReceived') {
+
+      try {
+
+      console.log(params.response.payloadData);
+      
+     
+      } catch (error) {
+        // JSON 파싱 오류 처리
+        console.error('Error parsing WebSocket payloadData:', error);
+      }
+    }
+  });
+  
+
+  결과가 이렇다.
+
+{"id":4073314,"channel":"chat","text":{"content":{"data":{"badges":[{"name":"pro:pro_premium","verbose_name":"Premium"}],"id":"1c6f2274-c5b8-4c95-9b61-f09ea6225108","is_moderator":false,"username":"Rowan_Signal","text":"https:\/\/in.tradingview.com\/chart\/EURUSD\/G7YqiZ5F-EUR-USD-Continues-Its-Downtrend\/","user_pic":"https:\/\/s3.tradingview.com\/userpics\/94562713-zbZk_mid.png","meta":{"links":{"charts":{"occurences":[{"end":81,"match":"https:\/\/in.tradingview.com\/chart\/EURUSD\/G7YqiZ5F-EUR-USD-Continues-Its-Downtrend\/","start":0,"id":"G7YqiZ5F"}],"data":{"G7YqiZ5F":{"pk":18458733,"video_cam":false,"symbol":"FX:EURUSD","is_video":false,"published_chart_url":"\/chart\/EURUSD\/G7YqiZ5F-EUR-USD-Continues-Its-Downtrend\/","user_id":94562713,"script_type":"","name":"EUR\/USD Continues Its Downtrend","image_url":"G7YqiZ5F"}}}},"temp":{"chart_likes":{"G7YqiZ5F":{"voted":true,"count":1}}},"version":"0.2","text":""},"room_id":"general","type":"","user_id":94562713,"time":"Fri Feb 28 08:08:57 2025 UTC","symbol":"","interval":""},"action":"message"},"channel":"chat_general"}}
+
+~m~156~m~{"m":"qsd","p":["qs_zITTTXx3WLgX",{"n":"BINANCE:XRPUSDT","s":"ok","v":{"trade_loaded":true,"bid_size":535.0,"bid":2.0054,"ask_size":10433.0,"ask":2.0055}}]}~m~254~m~{"m":"qsd","p":["qs_zITTTXx3WLgX",{"n":"={\"adjustment\":\"splits\",\"currency-id\":\"XTVCUSDT\",\"session\":\"extended\",\"symbol\":\"BINANCE:XRPUSDT\"}","s":"ok","v":{"trade_loaded":true,"bid_size":535.0,"bid":2.0054,"ask_size":10433.0,"ask":2.0055}}]}~m~152~m~{"m":"qsd","p":["qs_zITTTXx3WLgX",{"n":"BINANCE:XRPUSDT","s":"ok","v":{"volume":232451491.0,"lp_time":1740730136,"lp":2.0055,"chp":-8.78,"ch":-0.193}}]}~m~250~m~{"m":"qsd","p":["qs_zITTTXx3WLgX",{"n":"={\"adjustment\":\"splits\",\"currency-id\":\"XTVCUSDT\",\"session\":\"extended\",\"symbol\":\"BINANCE:XRPUSDT\"}","s":"ok","v":{"volume":232451491.0,"lp_time":1740730136,"lp":2.0055,"chp":-8.78,"ch":-0.193}}]}
+
+{"id":8,"channel":"private_G-dVFA61MF8zneyz6P4yt2-Ole1276V1qXpaSFviirQ","text":{"content":"{\"m\":\"event\",\"p\":{\"id\":31656342156,\"aid\":1990251143,\"fire_time\":1740730081,\"bar_time\":1740730080,\"sym\":\"BINANCE:XRPUSDT\",\"res\":\"1\",\"desc\":\"XRPUSDT 채널안 (상한: 2.6000, 하한:1.9000)\",\"snd_file\":\"alert\/fired\",\"snd\":false,\"popup\":true,\"cross_int\":true,\"name\":null,\"snd_duration\":0}}","channel":"alert"}}
+
+이런 값들이 차례로 날아오는데 그 중에서 channel 일 private로 시작하는거만 로그로 뿌려주도록 수정해보자
+
+
+
+{
+    "id": 6,
+    "channel": "private_G-dVFA61MF8zneyz6P4yt2-Ole1276V1qXpaSFviirQ",
+    "text": {
+        "content": {
+            "m": "alert_fired",
+            "p": {
+                "fire_id": 31656662462,
+                "sound_file": null,
+                "symbol": "={\"adjustment\":\"splits\",\"currency-id\":\"XTVCUSDT\",\"session\":\"extended\",\"symbol\":\"BINANCE:XRPUSDT\"}",
+                "cross_interval": true,
+                "popup": true,
+                "message": "XRPUSDT 채널안 (상한: 2.6000, 하한:1.9000)",
+                "alert_id": 1990251143,
+                "sound_duration": 0,
+                "fire_time": "2025-02-28T08:17:01Z",
+                "kinds": [
+                    "regular"
+                ],
+                "name": null,
+                "resolution": "1",
+                "bar_time": "2025-02-28T08:17:00Z"
+            },
+            "id": "iqdy-1555346"
+        },
+        "channel": "pricealerts"
+    }
+}
+
+
+{
+    "id": 7,
+    "channel": "private_G-dVFA61MF8zneyz6P4yt2-Ole1276V1qXpaSFviirQ",
+    "text": {
+        "content": "{\"m\":\"event\",\"p\":{\"id\":31656662462,\"aid\":1990251143,\"fire_time\":1740730621,\"bar_time\":1740730620,\"sym\":\"BINANCE:XRPUSDT\",\"res\":\"1\",\"desc\":\"XRPUSDT 채널안 (상한: 2.6000, 하한:1.9000)\",\"snd_file\":\"alert/fired\",\"snd\":false,\"popup\":true,\"cross_int\":true,\"name\":null,\"snd_duration\":0}}",
+        "channel": "alert"
+    }
+}
+
+{
+    "id": 174,
+    "channel": "private_G-dVFA61MF8zneyz6P4yt2-Ole1276V1qXpaSFviirQ",
+    "text": {
+        "content": {
+            "m": "alert_fired",
+            "p": {
+                "fire_id": 31659614773,
+                "sound_file": null,
+                "symbol": "={\"adjustment\":\"splits\",\"currency-id\":\"XTVCUSDT\",\"session\":\"extended\",\"symbol\":\"BINANCE:XRPUSDT\"}",
+                "cross_interval": true,
+                "popup": true,
+                "message": "매시징 XRPUSDT 채널안 (상한: 2.5000, 하한:1.5000)",
+                "alert_id": 1991174003,
+                "sound_duration": 0,
+                "fire_time": "2025-02-28T09:46:01Z",
+                "kinds": [
+                    "regular"
+                ],
+                "name": "얼렅 네임 나제왕",
+                "resolution": "1",
+                "bar_time": "2025-02-28T09:46:00Z"
+            },
+            "id": "7psg-3855816"
+        },
+        "channel": "pricealerts"
+    }
+}
+
+{
+    "id": 181,
+    "channel": "private_G-dVFA61MF8zneyz6P4yt2-Ole1276V1qXpaSFviirQ",
+    "text": {
+        "content": {
+            "m": "alert_fired",
+            "p": {
+                "fire_id": 31659715282,
+                "sound_file": null,
+                "symbol": "={\"adjustment\":\"splits\",\"currency-id\":\"XTVCUSDT\",\"session\":\"extended\",\"symbol\":\"BINANCE:XRPUSDT\"}",
+                "cross_interval": true,
+                "popup": true,
+                "message": "매시징 XRPUSDT 채널안 (상한: 2.5000, 하한:1.5000)",
+                "alert_id": 1991174003,
+                "sound_duration": 0,
+                "fire_time": "2025-02-28T09:50:01Z",
+                "kinds": [
+                    "regular"
+                ],
+                "name": "얼렅 네임 나제왕",
+                "resolution": "1",
+                "bar_time": "2025-02-28T09:50:00Z"
+            },
+            "id": "iqdy-3835424"
+        },
+        "channel": "pricealerts"
+    }
+}
+
+
+
+{
+    "id": 182,
+    "channel": "private_G-dVFA61MF8zneyz6P4yt2-Ole1276V1qXpaSFviirQ",
+    "text": {
+        "content": "{\"m\":\"event\",\"p\":{\"id\":31659715282,\"aid\":1991174003,\"fire_time\":1740736201,\"bar_time\":1740736200,\"sym\":\"BINANCE:XRPUSDT\",\"res\":\"1\",\"desc\":\"매시징 XRPUSDT 채널안 (상한: 2.5000, 하한:1.5000)\",\"snd_file\":\"alert/fired\",\"snd\":false,\"popup\":true,\"cross_int\":true,\"name\":\"얼렅 네임 나제왕\",\"snd_duration\":0}}",
+        "channel": "alert"
+    }
+}
+
+
+{
+    "id": 183,
+    "channel": "private_G-dVFA61MF8zneyz6P4yt2-Ole1276V1qXpaSFviirQ",
+    "text": {
+        "content": "{\"m\":\"alert_stopped\",\"p\":{\"id\":1991174003,\"stop\":\"manual\",\"error\":\"\",\"sym\":\"BINANCE:XRPUSDT\",\"desc\":\"매시징 XRPUSDT 채널안 (상한: 2.5000, 하한:1.5000)\",\"name\":\"얼렅 네임 나제왕\"}}",
+        "channel": "alert"
+    }
+}
+
+
+
+{
+    "id": 184,
+    "channel": "private_G-dVFA61MF8zneyz6P4yt2-Ole1276V1qXpaSFviirQ",
+    "text": {
+        "content": {
+            "m": "alerts_updated",
+            "p": [
+                {
+                    "active": false,
+                    "sound_file": null,
+                    "symbol": "={\"symbol\":\"BINANCE:XRPUSDT\",\"adjustment\":\"splits\",\"session\":\"extended\",\"currency-id\":\"XTVCUSDT\"}",
+                    "popup": true,
+                    "presentation_data": {
+                        "main_series": {
+                            "base-currency-logoid": "crypto/XTVCXRP",
+                            "pricescale": 10000,
+                            "type": "spot",
+                            "formatter": "price",
+                            "currency-logoid": "crypto/XTVCUSDT",
+                            "minmovement": 1
+                        }
+                    },
+                    "condition": {
+                        "type": "inside_channel",
+                        "frequency": "on_first_fire",
+                        "series": [
+                            {
+                                "type": "barset"
+                            },
+                            {
+                                "type": "value",
+                                "value": 2.5
+                            },
+                            {
+                                "type": "value",
+                                "value": 1.5
+                            }
+                        ]
+                    },
+                    "complexity": "complex",
+                    "last_fire_bar_time": "2025-02-28T09:50:00Z",
+                    "resolution": "1",
+                    "last_stop_reason": "manual",
+                    "last_error": null,
+                    "kinds": [
+                        "regular"
+                    ],
+                    "create_time": "2025-02-28T08:42:47Z",
+                    "sms_over_email": false,
+                    "cross_interval": true,
+                    "email": false,
+                    "message": "매시징 XRPUSDT 채널안 (상한: 2.5000, 하한:1.5000)",
+                    "alert_id": 1991174003,
+                    "expiration": "2025-03-29T08:41:56Z",
+                    "mobile_push": false,
+                    "sound_duration": 0,
+                    "last_fire_time": "2025-02-28T09:50:01Z",
+                    "type": "price",
+                    "auto_deactivate": false,
+                    "name": "얼렅 네임 나제왕",
+                    "web_hook": null
+                }
+            ],
+            "id": "zokj-6451910"
+        },
+        "channel": "pricealerts"
+    }
+}
